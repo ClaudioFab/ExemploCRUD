@@ -1,0 +1,62 @@
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $nome = $_POST["aluno"];
+    $curso = $_POST["curso"];
+
+    require("conexao.php");
+
+    $inserir = "INSERT INTO matricula (nome,curso) VALUES ('$nome','$curso')";
+
+    if (mysqli_query($conexao, $inserir)) {
+        echo "
+        <script>
+        alert('Cadastro realizado com sucesso!');
+        window.localhost.href = 'cadastro.php';
+        </script>";
+        exit();
+    } else {
+        echo "
+        <script>
+        alert('Erro ao cadastrar:" . mysqli_error($conexao) . "');
+        window.history.back();
+        </script>";
+        exit();
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Curso</title>
+</head>
+
+<body>
+    <main>
+        <h2>Cadastro de Curso</h2>
+
+        <form method="post" action="">
+            <label>Nome: </label>
+            <input type="text" name="aluno">
+            <br><br>
+            <label>Curso: </label>
+            <input type="text" name="curso">
+            <br><br>
+            <button type="reset">Limpar</button>
+            <br><br>
+            <button type="submit">Cadastrar</button>
+            <br><br>
+            <a href="conexao.php">Voltar</a>
+        </form>
+
+
+
+
+    </main>
+</body>
+
+</html>
