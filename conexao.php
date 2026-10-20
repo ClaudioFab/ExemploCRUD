@@ -5,7 +5,7 @@ $conexao = mysqli_connect(
     "root",
     "",
     "sistemaAcademico",
-    3307
+    3306
 );
 
 if(!$conexao){
