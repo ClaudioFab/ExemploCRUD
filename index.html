@@ -16,41 +16,53 @@
 
 <body>
     <!-- NAVBAR -------------------------------------------------------------------------------------------------------->
-    <nav class="navbar navbar-expand-lg bg-primary p-2" data-bs-theme="dark">
+    <nav class="navbar bg-primary p-2" data-bs-theme="dark">
         <div class="container-fluid">
+            <!-- Título e icone --------------------------------->
             <a class="navbar-brand" href="#"><i class="bi bi-book me-2"></i>Sistema Acadêmico</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                </ul>
-                <ul class="navbar-nav ms-auto">
+            <!-- Links que ficam do lado de fora ------------------------------------->
+            <div class="d-flex align-items-center gap-3 ms-auto">
+
+                <ul class="navbar-nav flex-row gap-3 me-2">
                     <li class="nav-item">
-                        <a class="nav-link active fs-5" aria-current="page" href="#inicio">Incio</a>
+                        <a class="nav-link active fs-5" aria-current="page" href="#inicio">Início</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active fs-5" aria-current="page" href="#categoria">Categorias</a>
                     </li>
-
-                    <!-- Botões de navegação ----------------------------------------------------------->
-                    <!-- Cadastro Aluno -->
-                    <li>
-                        <a class="nav-link active fw-bold fs-5" href="cadastro.php">Cadastro de Aluno</a>
-                    </li>
-                    <!-- Atualizar Dados -->
-                    <li>
-                        <a class="nav-link active fw-bold fs-5" href="atualizarDados.php">Atualizar Dados</a>
-                    </li>
-                    <!-- Informações Gerais -->
-                    <li>
-                        <a class="nav-link active fw-bold fs-5" href="lendoDados.php">Informações Gerais</a>
-                    </li>
-                    <!-- --------------- ----------------------------------------------------------->
                 </ul>
+
+                <!-- Botão lateral direito ---------------------------------------->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Barra Lateral----------------------------------------------------->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header bg-primary">
+                    <h3 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel"><i class="bi bi-list fs-2 me-2"></i>Menu</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body bg-primary">
+                    <!-- links internos dentro da barra  ----------------------------------------------->
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-5" href="cadastro.php"><i class="bi bi-book fs-4 me-2"></i>Cadastro de Aluno</a>
+                    </li>
+                    <br>
+                    <li class="nav-item">
+                        <a class="nav-link active fs-5" href="atualizarDados.php"><i class="bi bi-info-square fs-4 me-2"></i>Atualizar Dados</a>
+                    </li>
+                    <br>
+                    <li class="nav-item">
+                        <a class="nav-link active fs-5" href="lendoDados.php"><i class="bi bi-card-checklist fs-4 me-2"></i>Informações Gerais</a>
+                    </li> 
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -60,29 +72,23 @@
         <!--  --------------------------------------------------------------------------------->
         <!--  --------------------------------------------------------------------------------->
         <!-- Cabeçalho -->
-        <!------------------- Hero Section ------------------------------------->
         <section class="container text-primary py-4 w-100">
             <div class="row px-md-5 mx-md-5 align-items-center">
                 <div class="col-sm-6 align-items-center">
                     <h1 class="display-5 fw-bold mb-3">Gestão e Controle de Informações</h1>
-
                     <p>Acesse históricos, dados cadastrais e o canal de atendimento interno em uma única plataforma.</p>
-
                 </div>
                 <div class="col-sm-6 ">
                     <img src="img/sistemaAcademico.png" WIDTH=550 HEIGHT=400 class="rounded-3 d-block mx-auto"
                         alt="imagem aperto de maos">
                 </div>
             </div>
-
         </section>
-        <!--  --------------------------------------------------------------------------------->
         <!--  --------------------------------------------------------------------------------->
     </header>
 
     <!-- MAIN ----------------------------------------------------------------------------------------------------------->
     <main>
-
         <!-- CARD CATEGORIAS in ----------------------------------------------------------------------->
         <section class="container text-center mt-5 " id="categoria">
             <!-- Titulo -->
@@ -148,7 +154,6 @@
 
     <!-- FOOTER --------------------------------------------------------------------------------------------------------->
     <footer class="bg-primary text-white p-3 pt-4" data-bs-theme="dark">
-
         <div class="container">
             <div class="row">
                 <div class="col col-md">
