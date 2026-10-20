@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <br><br>
             <button type="submit">Cadastrar</button>
             <br><br>
-            <a href="conexao.php">Voltar</a>
+            <a href="index.html">Voltar</a>
         </form>
 
 

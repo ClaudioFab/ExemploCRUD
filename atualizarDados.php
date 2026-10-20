@@ -36,7 +36,7 @@ $alunos = mysqli_query($conexao, "SELECT * FROM matricula");
 if (isset($_GET['apagar'])) {
     $idMatricula = $_GET['apagar'];
 
-    $deletar = "SELECT FROM matricula WHERE idMatricula = $idMatricula";
+    $deletar = "DELETE FROM sistemaacademico.matricula WHERE idMatricula = $idMatricula";
 
     if (mysqli_query($conexao, $deletar)) {
         echo "<script>
@@ -111,8 +111,6 @@ if (isset($_GET['apagar'])) {
                 <input type="text" name="curso" value="<?= $editaAluno['curso'] ?>">
                 <br><br>
                 <button type="submit" name="atualizar">Atualizar</button>
-                <br><br>
-                <button type="submit" name="apagar">Deletar</button>
                 <br><br>
                 <button type="button" onclick="window.location.href='atualizarDados.php'">Cancelar</button>
 
