@@ -13,7 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "
         <script>
         alert('Cadastro realizado com sucesso!');
-        window.localhost.href = 'cadastro.php';
+        
+        /*Para retornar a pagina*/
+        window.location.href = 'cadastro.php';
         </script>";
         exit();
     } else {
@@ -128,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                                 <!-- Botões -------------------------------------------->
                                 <div class="d-grid gap-2">
-                                    <button type="submit" class="btn btn-primary fw-bold">
+                                    <button  type="submit" class="btn btn-primary fw-bold">
                                         <i class="bi bi-person-add me-2"></i>Cadastrar
                                     </button>
                                     <button type="reset" class="btn btn-outline-primary fw-bold">
